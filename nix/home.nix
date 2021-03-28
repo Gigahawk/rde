@@ -63,8 +63,8 @@
     };
 
     home.stateVersion = "20.09";
-    home.keyboard.layout = "us,ru";
-    home.keyboard.variant = "dvorak,";
+    home.keyboard.layout = "us";
+    home.keyboard.variant = "qwerty,";
     home.keyboard.options =
       [ "ctrl:nocaps" "grp:win_space_toggle" "grp:rctrl_switch" ];
 
