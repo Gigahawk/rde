@@ -165,20 +165,20 @@
   };
   hardware.steam-hardware.enable = true;
 
-  systemd.services.guix-daemon = {
-    enable = true;
-    description = "Build daemon for GNU Guix";
-    serviceConfig = {
-      ExecStart =
-        "/var/guix/profiles/per-user/root/current-guix/bin/guix-daemon --build-users-group=guixbuild";
-      Environment = "GUIX_LOCPATH=/root/.guix-profile/lib/locale";
-      RemainAfterExit = "yes";
-      StandardOutput = "syslog";
-      StandardError = "syslog";
-      TaskMax = "8192";
-    };
-    wantedBy = [ "multi-user.target" ];
-  };
+  # systemd.services.guix-daemon = {
+  #   enable = true;
+  #   description = "Build daemon for GNU Guix";
+  #   serviceConfig = {
+  #     ExecStart =
+  #       "/var/guix/profiles/per-user/root/current-guix/bin/guix-daemon --build-users-group=guixbuild";
+  #     Environment = "GUIX_LOCPATH=/root/.guix-profile/lib/locale";
+  #     RemainAfterExit = "yes";
+  #     StandardOutput = "syslog";
+  #     StandardError = "syslog";
+  #     TaskMax = "8192";
+  #   };
+  #   wantedBy = [ "multi-user.target" ];
+  # };
   systemd.services.thinkpad-fix-sound = {
     description = "Fix the sound on X1 Yoga";
     path = [ pkgs.alsaTools ];
