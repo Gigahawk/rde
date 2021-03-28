@@ -251,7 +251,7 @@
     enable = true;
 
     displayManager.lightdm.enable = true;
-    displayManager.lightdm.autoLogin = {
+    displayManager.autoLogin = {
       enable = true;
       user = "abcdw";
     };
