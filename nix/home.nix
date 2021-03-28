@@ -112,9 +112,9 @@
       # ];
       profiles.default.settings = {
         "browser.shell.checkDefaultBrowser" = false;
-        "network.proxy.socks" = "localhost";
-        "network.proxy.socks_port" = ssh-tunnel-port;
-        "network.proxy.type" = 1;
+        # "network.proxy.socks" = "localhost";
+        # "network.proxy.socks_port" = ssh-tunnel-port;
+        # "network.proxy.type" = 1;
       };
     };
     programs.chromium = {
