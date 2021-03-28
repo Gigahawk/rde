@@ -252,10 +252,10 @@
     enable = true;
 
     displayManager.lightdm.enable = true;
-    #displayManager.autoLogin = {
-    #  enable = true;
-    #  user = "abcdw";
-    #};
+    displayManager.autoLogin = {
+      enable = true;
+      user = "abcdw";
+    };
     displayManager.session = [{
       manage = "desktop";
       name = "xsession";
