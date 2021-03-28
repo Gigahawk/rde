@@ -4,8 +4,10 @@
 
 { config, lib, pkgs, inputs, ... }: {
 
-  boot.initrd.availableKernelModules =
-    [ "xhci_pci" "nvme" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ 
+    "xhci_pci" "ahci" "ohci_pci" "ehci_pci" 
+    "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" 
+  ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
