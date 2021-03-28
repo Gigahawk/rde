@@ -164,6 +164,12 @@
     extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
   };
   hardware.steam-hardware.enable = true;
+  
+  systemd.services.display-manager = {
+    # https://github.com/NixOS/nixpkgs/issues/97795
+    wants = [ "systemd-user-sessions.service" "multi-user.target" "network-online.target" ];
+    after = [ "systemd-user-sessions.service" "multi-user.target" "network-online.target" ];
+  };
 
   # systemd.services.guix-daemon = {
   #   enable = true;
