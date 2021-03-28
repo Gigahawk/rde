@@ -179,15 +179,16 @@
   #   };
   #   wantedBy = [ "multi-user.target" ];
   # };
-  systemd.services.thinkpad-fix-sound = {
-    description = "Fix the sound on X1 Yoga";
-    path = [ pkgs.alsaTools ];
-    wantedBy = [ "default.target" ];
-    after = [ "sound.target" "alsa-store.service" ];
-    script = ''
-      ${pkgs.alsaTools}/bin/hda-verb /dev/snd/hwC0D0 0x1d SET_PIN_WIDGET_CONTROL 0x0
-    '';
-  };
+
+  #systemd.services.thinkpad-fix-sound = {
+  #  description = "Fix the sound on X1 Yoga";
+  #  path = [ pkgs.alsaTools ];
+  #  wantedBy = [ "default.target" ];
+  #  after = [ "sound.target" "alsa-store.service" ];
+  #  script = ''
+  #    ${pkgs.alsaTools}/bin/hda-verb /dev/snd/hwC0D0 0x1d SET_PIN_WIDGET_CONTROL 0x0
+  #  '';
+  #};
 
   virtualisation.libvirtd.enable = true;
 
@@ -251,10 +252,10 @@
     enable = true;
 
     displayManager.lightdm.enable = true;
-    displayManager.autoLogin = {
-      enable = true;
-      user = "abcdw";
-    };
+    #displayManager.autoLogin = {
+    #  enable = true;
+    #  user = "abcdw";
+    #};
     displayManager.session = [{
       manage = "desktop";
       name = "xsession";
@@ -291,5 +292,5 @@
       [ "users" "wheel" "input" "audio" "networkmanager" "docker" "sway" ];
   };
 
-  system.stateVersion = "20.03"; # Did you read the comment?
+  system.stateVersion = "20.09"; # Did you read the comment?
 }
