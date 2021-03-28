@@ -264,7 +264,7 @@ in {
           "nix"
           "magit"
           "olivetti"
-          "project"
+          # "project"
           "elpher"
           "geiser"
           "guix"
