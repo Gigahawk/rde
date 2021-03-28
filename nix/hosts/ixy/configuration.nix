@@ -201,7 +201,7 @@
 
   fonts.enableFontDir = true;
   fonts.enableGhostscriptFonts = true;
-  fonts.fontconfig.dpi = 192;
+  fonts.fontconfig.dpi = 96;
   fonts.fonts = with pkgs;
     [
       # corefonts # Micrsoft free fonts
