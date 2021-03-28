@@ -117,13 +117,13 @@
     };
   };
 
-  boot.initrd.luks.devices = {
-    enc-pv = {
-      device = "/dev/disk/by-uuid/26d8adbb-d46d-498d-aa87-b919f40cae94";
-      preLVM = true;
-      allowDiscards = true;
-    };
-  };
+  # boot.initrd.luks.devices = {
+  #   enc-pv = {
+  #     device = "/dev/disk/by-uuid/26d8adbb-d46d-498d-aa87-b919f40cae94";
+  #     preLVM = true;
+  #     allowDiscards = true;
+  #   };
+  # };
 
   # boot.extraModprobeConfig = ''
   #   options snd_hda_intel power_save=1
