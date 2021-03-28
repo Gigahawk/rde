@@ -46,6 +46,7 @@
         unstable = final: prev: {
           unstable = (import inputs.unstable {
             overlays = [ inputs.emacs.overlay ];
+            config.allowUnfree = true;
             inherit system;
           });
         };
@@ -90,7 +91,12 @@
         ixy = lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            { nixpkgs.overlays = [ overlays.unstable ]; }
+            {
+              nixpkgs = {
+                overlays = [ overlays.unstable ];
+                config.allowUnfree = true;
+              };
+            }
 
             inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x140e
             (import ./nix/hosts/ixy)

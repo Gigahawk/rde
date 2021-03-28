@@ -9,8 +9,8 @@
     "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" 
   ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.kernelModules = [ "kvm-amd" "wl" ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/219712f7-8a8c-478a-b361-22083cfc66ac";
