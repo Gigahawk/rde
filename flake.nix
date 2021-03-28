@@ -92,7 +92,7 @@
           modules = [
             { nixpkgs.overlays = [ overlays.unstable ]; }
 
-            inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-7th-gen
+            inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x140e
             (import ./nix/hosts/ixy)
 
             inputs.home-manager.nixosModules.home-manager
