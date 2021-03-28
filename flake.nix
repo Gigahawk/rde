@@ -12,7 +12,7 @@
   # TODO: Desktop entry for roam protocol https://www.orgroam.com/manual/Installation-_00281_0029.html#Installation-_00281_0029
 
   inputs = rec {
-    stable.url = "github:NixOS/nixpkgs/nixos-20.03";
+    stable.url = "github:NixOS/nixpkgs/nixos-20.09";
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:rycee/home-manager";
